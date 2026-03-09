@@ -3,7 +3,7 @@ import EmptyFilter from "@/app/components/EmptyFilter";
 export default async function SignIn({
   searchParams,
 }: {
-  searchParams: { callbackUrl: string };
+  searchParams: Promise<{ callbackUrl: string }>;
 }) {
   const { callbackUrl } = await searchParams;
   return (
