@@ -13,10 +13,12 @@
     <Folder Include="DTOs\" />
     <Folder Include="Entities\" />
     <Folder Include="RequestHelpers\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="16.0.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.76.0" />
     <PackageReference Include="MassTransit.EntityFrameworkCore" Version="8.5.8-develop.2412" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="8.5.8-develop.2412" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.12" />
@@ -26,6 +28,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="protos/auctions.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>
